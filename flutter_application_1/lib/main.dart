@@ -1621,7 +1621,11 @@ class _AddExpenseBottomSheetState extends State<AddExpenseBottomSheet> {
 
               Expanded(
                 child: SingleChildScrollView(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                    bottom: MediaQuery.of(context).viewInsets.bottom + 20,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -1759,35 +1763,32 @@ class _AddExpenseBottomSheetState extends State<AddExpenseBottomSheet> {
                       ),
 
                       SizedBox(height: 32),
-                    ],
-                  ),
-                ),
-              ),
 
-              // Add button
-              Container(
-                padding: EdgeInsets.all(20),
-                child: SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: ElevatedButton(
-                    onPressed: _canAddExpense() ? _addExpense : null,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: selectedCategory?.color ??
-                          Theme.of(context).colorScheme.primary,
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
+                      // Add button
+                      SizedBox(
+                        width: double.infinity,
+                        height: 56,
+                        child: ElevatedButton(
+                          onPressed: _canAddExpense() ? _addExpense : null,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: selectedCategory?.color ??
+                                Theme.of(context).colorScheme.primary,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            elevation: 0,
+                          ),
+                          child: Text(
+                            'Add Expense',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
                       ),
-                      elevation: 0,
-                    ),
-                    child: Text(
-                      'Add Expense',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    ],
                   ),
                 ),
               ),
