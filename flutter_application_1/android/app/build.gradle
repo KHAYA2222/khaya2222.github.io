@@ -15,7 +15,7 @@ if (keyPropertiesFile.exists()) {
 android {
     namespace = "com.khayelihle.dailytracker"
     compileSdk = 35
-    ndkVersion = "25.2.9519653" // or your existing NDK version
+    ndkVersion "26.1.10909125" // or your existing NDK version
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

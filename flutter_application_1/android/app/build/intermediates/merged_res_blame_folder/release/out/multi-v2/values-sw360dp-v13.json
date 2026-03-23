@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.khayelihle.dailytracker.app-mergeReleaseResources-40:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\KHAYE\\.gradle\\caches\\transforms-3\\e33efc8235583e7d5c3e1e9b18ffa5e6\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                }
+            ]
+        }
+    ]
+}
